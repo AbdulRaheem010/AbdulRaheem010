@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -180,5 +181,52 @@
     </footer>
 
     <script src="script.js"></script>
-  </body>
+</body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lumen Gallery | Virtual Art Space</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="ambient ambient-1"></div>
+  <div class="ambient ambient-2"></div>
+  <div class="ambient ambient-3"></div>
+
+  <header class="hero">
+    <p class="kicker">Virtual Exhibition</p>
+    <h1>Lumen Gallery</h1>
+    <p class="subtitle">A curated immersive art experience in motion.</p>
+  </header>
+
+  <main class="container">
+    <section class="controls">
+      <button class="filter is-active" data-filter="all">All</button>
+      <button class="filter" data-filter="abstract">Abstract</button>
+      <button class="filter" data-filter="portrait">Portrait</button>
+      <button class="filter" data-filter="landscape">Landscape</button>
+      <button class="filter" data-filter="digital">Digital</button>
+    </section>
+
+    <section class="gallery" id="gallery"></section>
+  </main>
+
+  <dialog id="artworkModal" class="modal">
+    <button id="closeModal" class="close" aria-label="Close preview">×</button>
+    <figure class="modal-content">
+      <img id="modalImage" alt="Artwork preview" />
+      <figcaption>
+        <h2 id="modalTitle"></h2>
+        <p id="modalArtist"></p>
+        <span id="modalCategory"></span>
+      </figcaption>
+    </figure>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+
 </html>
