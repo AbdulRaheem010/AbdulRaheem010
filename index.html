@@ -3,45 +3,129 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lumen Gallery | Virtual Art Space</title>
+  <title>NovaCut AI | Futuristic Video Editor</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="ambient ambient-1"></div>
-  <div class="ambient ambient-2"></div>
-  <div class="ambient ambient-3"></div>
+  <div class="app-shell">
+    <aside class="sidebar ai-tools">
+      <div class="panel-header">
+        <p class="label">AI Tools</p>
+        <h2>Assist Suite</h2>
+      </div>
 
-  <header class="hero">
-    <p class="kicker">Virtual Exhibition</p>
-    <h1>Lumen Gallery</h1>
-    <p class="subtitle">A curated immersive art experience in motion.</p>
-  </header>
+      <button class="tool-btn active">🎬 Auto Cut Detection</button>
+      <button class="tool-btn">🗣️ Voice Cleanup</button>
+      <button class="tool-btn">🎨 Smart Color Grade</button>
+      <button class="tool-btn">🧠 Scene Generator</button>
+      <button class="tool-btn">✨ Motion Smoothing</button>
 
-  <main class="container">
-    <section class="controls">
-      <button class="filter is-active" data-filter="all">All</button>
-      <button class="filter" data-filter="abstract">Abstract</button>
-      <button class="filter" data-filter="portrait">Portrait</button>
-      <button class="filter" data-filter="landscape">Landscape</button>
-      <button class="filter" data-filter="digital">Digital</button>
-    </section>
+      <div class="ai-status">
+        <p>Render Intelligence</p>
+        <div class="progress"><span></span></div>
+        <small>Analyzing timeline context…</small>
+      </div>
+    </aside>
 
-    <section class="gallery" id="gallery"></section>
-  </main>
+    <main class="workspace">
+      <header class="topbar">
+        <div>
+          <p class="label">Project</p>
+          <h1>NovaCut — Campaign_v8</h1>
+        </div>
+        <div class="top-actions">
+          <button class="ghost-btn">Share</button>
+          <button class="ghost-btn">Save Version</button>
+          <button id="openExport" class="primary-btn">Export</button>
+        </div>
+      </header>
 
-  <dialog id="artworkModal" class="modal">
-    <button id="closeModal" class="close" aria-label="Close preview">×</button>
-    <figure class="modal-content">
-      <img id="modalImage" alt="Artwork preview" />
-      <figcaption>
-        <h2 id="modalTitle"></h2>
-        <p id="modalArtist"></p>
-        <span id="modalCategory"></span>
-      </figcaption>
-    </figure>
+      <section class="preview-area card">
+        <div class="preview-header">
+          <h3>Video Preview</h3>
+          <span>4K · 24fps · AI Enhanced</span>
+        </div>
+        <div class="video-preview">
+          <div class="glow-ring"></div>
+          <button class="play-btn">▶</button>
+          <p class="timecode">00:01:23:14</p>
+        </div>
+      </section>
+
+      <section class="timeline-area card">
+        <div class="timeline-header">
+          <h3>Timeline Editor</h3>
+          <div class="zoom-controls">
+            <button>−</button>
+            <span>100%</span>
+            <button>+</button>
+          </div>
+        </div>
+
+        <div class="timeline-grid">
+          <div class="track-label">V1</div>
+          <div class="track-row">
+            <div class="clip clip-purple" style="--w: 28%">Intro</div>
+            <div class="clip clip-cyan" style="--w: 22%">B-Roll</div>
+            <div class="clip clip-pink" style="--w: 30%">Interview</div>
+          </div>
+
+          <div class="track-label">V2</div>
+          <div class="track-row">
+            <div class="clip clip-blue" style="--w: 33%">Overlays</div>
+            <div class="clip clip-green" style="--w: 18%">Transitions</div>
+          </div>
+
+          <div class="track-label">A1</div>
+          <div class="track-row">
+            <div class="clip clip-orange" style="--w: 40%">Narration</div>
+            <div class="clip clip-purple" style="--w: 24%">Music Bed</div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <aside class="sidebar layers card">
+      <div class="panel-header">
+        <p class="label">Layers</p>
+        <h2>Controls</h2>
+      </div>
+
+      <div class="layer-item"><span>Title Overlay</span><input type="range" value="84"></div>
+      <div class="layer-item"><span>Color LUT</span><input type="range" value="67"></div>
+      <div class="layer-item"><span>Particle FX</span><input type="range" value="42"></div>
+      <div class="layer-item"><span>Vignette</span><input type="range" value="55"></div>
+
+      <button class="primary-btn full">+ Add Layer</button>
+    </aside>
+  </div>
+
+  <dialog id="exportModal" class="modal">
+    <form method="dialog" class="modal-content">
+      <h3>Export Project</h3>
+      <p>Configure final output with AI upscaling.</p>
+      <label>Format
+        <select>
+          <option>MP4 (H.265)</option>
+          <option>ProRes 422</option>
+          <option>WebM</option>
+        </select>
+      </label>
+      <label>Resolution
+        <select>
+          <option>3840 × 2160 (4K)</option>
+          <option>2560 × 1440 (QHD)</option>
+          <option>1920 × 1080 (FHD)</option>
+        </select>
+      </label>
+      <div class="modal-actions">
+        <button value="cancel" class="ghost-btn">Cancel</button>
+        <button id="confirmExport" value="default" class="primary-btn">Start Export</button>
+      </div>
+    </form>
   </dialog>
 
   <script src="script.js"></script>
