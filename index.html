@@ -1,5 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="NovaMind AI helps teams automate operations with safe, explainable, enterprise-ready AI workflows."
+    />
+    <title>NovaMind AI | Intelligent Automation for Modern Teams</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav container" aria-label="Main Navigation">
+        <a href="#hero" class="logo">NovaMind<span>AI</span></a>
+        <button class="menu-toggle" aria-expanded="false" aria-controls="nav-links">☰</button>
+        <ul id="nav-links" class="nav-links">
+          <li><a href="#features">Features</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="hero" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content reveal">
+          <p class="badge">Trusted by 1,200+ high-growth teams</p>
+          <h1>Automate smarter workflows with practical enterprise AI.</h1>
+          <p>
+            Deploy copilots, route approvals, and scale customer operations with secure,
+            human-centered automation in days—not quarters.
+          </p>
+          <div class="cta-group">
+            <a href="#pricing" class="btn btn-primary">Start Free Trial</a>
+            <a href="#features" class="btn btn-secondary">Explore Features</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="features" class="section">
+        <div class="container">
+          <h2 class="section-title reveal">Built for modern AI operations</h2>
+          <div class="feature-grid">
+            <article class="card reveal">
+              <h3>Workflow Studio</h3>
+              <p>Design automations visually with branching logic and role-based approvals.</p>
+            </article>
+            <article class="card reveal">
+              <h3>AI Knowledge Hub</h3>
+              <p>Connect docs, wikis, and CRM data to ground every response in your truth.</p>
+            </article>
+            <article class="card reveal">
+              <h3>Security by Default</h3>
+              <p>Enterprise SSO, audit logs, encryption, and scoped access controls included.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="testimonials" class="section alt">
+        <div class="container">
+          <h2 class="section-title reveal">What customers say</h2>
+          <div class="testimonial-slider reveal" aria-live="polite">
+            <blockquote class="testimonial active">
+              “We reduced onboarding time by 42% in six weeks. NovaMind became our operations backbone.”
+              <cite>— Sarah Lin, COO at OrbitWave</cite>
+            </blockquote>
+            <blockquote class="testimonial">
+              “The automation templates shipped immediate ROI without adding engineering overhead.”
+              <cite>— James Cole, Head of Support at VividScale</cite>
+            </blockquote>
+            <blockquote class="testimonial">
+              “Fast setup, clean UX, and governance our legal team actually approved on day one.”
+              <cite>— Priya Mehta, VP Operations at BeaconGrid</cite>
+            </blockquote>
+            <div class="slider-controls">
+              <button class="slider-btn" id="prev-testimonial" aria-label="Previous testimonial">←</button>
+              <button class="slider-btn" id="next-testimonial" aria-label="Next testimonial">→</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="pricing" class="section">
+        <div class="container">
+          <h2 class="section-title reveal">Simple, scalable pricing</h2>
+          <div class="pricing-grid">
+            <article class="pricing-card reveal">
+              <h3>Starter</h3>
+              <p class="price">$29<span>/mo</span></p>
+              <ul>
+                <li>Up to 3 active workflows</li>
+                <li>Email support</li>
+                <li>1 shared workspace</li>
+              </ul>
+              <button class="btn btn-secondary">Choose Starter</button>
+            </article>
+            <article class="pricing-card featured reveal">
+              <h3>Growth</h3>
+              <p class="price">$99<span>/mo</span></p>
+              <ul>
+                <li>Unlimited workflows</li>
+                <li>Priority support</li>
+                <li>Advanced analytics</li>
+              </ul>
+              <button class="btn btn-primary">Choose Growth</button>
+            </article>
+            <article class="pricing-card reveal">
+              <h3>Enterprise</h3>
+              <p class="price">Custom</p>
+              <ul>
+                <li>Dedicated success manager</li>
+                <li>Custom SLAs</li>
+                <li>Security review support</li>
+              </ul>
+              <button class="btn btn-secondary">Contact Sales</button>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="faq" class="section alt">
+        <div class="container">
+          <h2 class="section-title reveal">Frequently asked questions</h2>
+          <div class="faq-list reveal">
+            <details>
+              <summary>How long does implementation take?</summary>
+              <p>Most teams launch their first production workflow in under one week.</p>
+            </details>
+            <details>
+              <summary>Can we bring our own model provider?</summary>
+              <p>Yes. NovaMind supports model routing across major providers with fallback logic.</p>
+            </details>
+            <details>
+              <summary>Do you support compliance requirements?</summary>
+              <p>We provide SOC 2 controls, audit logs, and configurable data retention policies.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <div class="container">
+          <h2 class="section-title reveal">Book a product walkthrough</h2>
+          <form id="contact-form" class="contact-form reveal" novalidate>
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" required minlength="2" />
+
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required />
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" required minlength="10"></textarea>
+
+            <button type="submit" class="btn btn-primary">Send Message</button>
+            <p id="form-status" role="status"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© 2026 NovaMind AI. Built for ambitious teams.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -46,4 +228,5 @@
 
   <script src="script.js"></script>
 </body>
+
 </html>
